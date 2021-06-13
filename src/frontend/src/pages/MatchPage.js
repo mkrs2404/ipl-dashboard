@@ -5,7 +5,7 @@ import MatchDetailCard from '../components/MatchDetailCard';
 export const MatchPage = () =>{
 
   const [matches, setMatches] = useState([])
-  const {teamName, year} =useParams();
+  const {teamName, year} = useParams();
 
 
     useEffect(

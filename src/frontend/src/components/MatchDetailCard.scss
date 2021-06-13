@@ -1,0 +1,19 @@
+.MatchDetailCard{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    .match-date, .match-venue, .match-result{
+        margin-top: 10px;
+    }
+
+    .additional-detail{
+        text-align: right;
+        // & means the same class in which it is. SO, stating that any paragraph tag after .additional-detail to have this margin
+        & > p {
+            margin-bottom: 20px;
+        }
+    }
+
+}

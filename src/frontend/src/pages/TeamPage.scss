@@ -1,0 +1,42 @@
+.TeamPage{
+    // Making a grid layout with 4 coumns and 3 rows. Each Div takes one cell.
+    //Row 1- Team name and Win/Loss. Row 2 - Match Detail Card. Row 3- 3 Small cards with a 'More >' Link
+    //There will be max 4 columns due to last row
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    //Benefit of using scss over css. We can use sub components inside the main component.
+    //Else, we'd have to write .TeamPage.team-name-section outside this.
+    .team-name-section{
+        //Making team name take 3 out of 4 columns
+        grid-column: span 3;
+        //Pushing to bottom of div
+        align-self: flex-end;
+
+    }
+
+    .team-name{
+        font-size: 4rem;    //Root-em. 4 times the size of root element
+        margin-bottom: 20px;
+    }
+
+    .win-loss-section{
+        justify-self: center;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .match-detail-section{
+        grid-column: span 4;
+    }
+    
+    .more-link{
+        align-self: center;
+        justify-self: center;
+        font-size: 1.5rem;
+    }
+}
+
